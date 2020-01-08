@@ -11,8 +11,8 @@ function ApodList() {
         axios
         .get('https://api.nasa.gov/planetary/apod?api_key=sKf1PeqzFRWl4kDX1QTznId3B1WBhr2o3GalEcdo')
         .then(res => {
-            console.log(res.data);
             setPhoto(res.data);
+            console.log(res.data)
         })
         .catch(err => {
             console.log('This is in error: ', err);
@@ -21,7 +21,7 @@ function ApodList() {
 
     return (
         <div className='apod-list'>
-            {photo.map((index, data) => {
+            {photo.map((data, index) => {
                 <ApodCard key={index} name={data.copyright} date={data.date} description={data.explanation} title={data.title} url={data.url} />
             })}
         </div>
