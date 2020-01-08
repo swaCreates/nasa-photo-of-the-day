@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.apod-card{
+  border: 1px solid red;
+  display: flex;
+  width: 100%;
+}
+img{
+  width: 30vw;
+  height: 40vh;
+}
+.img{
+  margin: 2%;
+}
+p, h1, h2{
+  text-align: left;
+  font-weight: 300;
+}
+.App{
+  margin: 10% 5%;
+  
+}

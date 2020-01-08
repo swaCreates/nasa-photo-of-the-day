@@ -19,13 +19,31 @@ function ApodList() {
         })
     }, []);
 
+    
+
     return (
         <div className='apod-list'>
-            {photo.map((data, index) => {
-                <ApodCard key={index} name={data.copyright} date={data.date} description={data.explanation} title={data.title} url={data.url} />
-            })}
+
+            {<ApodCard
+            
+             key={photo}
+             name={photo.copyright} 
+             date={photo.date} 
+             description={photo.explanation} 
+             title={photo.title} 
+             url={photo.url} 
+
+            />}
+
+
+                {/* Had trouble running this code to render the data coming from the api */}
+
+            {/* {Object.values(photo).map((data, index) => {
+                return <ApodCard key={index} name={data.copyright} date={data.date} description={data.explanation} title={data.title} url={data.url} /> */}
+        
         </div>
     )
+
 }
 
 export default ApodList;
