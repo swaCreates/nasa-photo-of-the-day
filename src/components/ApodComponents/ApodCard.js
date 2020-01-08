@@ -4,7 +4,7 @@ function ApodCard() {
 
 
     return (
-        <div>
+        <div className='apod-card'>
             
         </div>
     )

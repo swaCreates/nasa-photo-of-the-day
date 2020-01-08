@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+import ApodCard from './ApodCard';
 
 
 function ApodList() {
@@ -19,8 +20,10 @@ function ApodList() {
     }, []);
 
     return (
-        <div>
-            
+        <div className='apod-list'>
+            {photo.map((index, data) => {
+                <ApodCard key={index} name={data.copyright} date={data.date} description={data.explanation} title={data.title} url={data.url} />
+            })}
         </div>
     )
 }
