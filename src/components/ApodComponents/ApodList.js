@@ -8,9 +8,10 @@ function ApodList() {
 
     const [photo, setPhoto]= useState([]);
 
+
     useEffect(() => {
         axios
-        .get('https://api.nasa.gov/planetary/apod?api_key=sKf1PeqzFRWl4kDX1QTznId3B1WBhr2o3GalEcdo')
+        .get(`https://api.nasa.gov/planetary/apod?api_key=sKf1PeqzFRWl4kDX1QTznId3B1WBhr2o3GalEcdo`)
         .then(res => {
             setPhoto(res.data);
             console.log(res.data)
@@ -32,7 +33,8 @@ function ApodList() {
              date={photo.date} 
              description={photo.explanation} 
              title={photo.title} 
-             url={photo.url} 
+             url={photo.url}
+            
 
             />}
 

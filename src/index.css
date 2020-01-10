@@ -21,6 +21,7 @@ code {
 img{
   width: 30vw;
   height: 40vh;
+  border-radius: 3px;
 }
 .img{
   margin: 2%;

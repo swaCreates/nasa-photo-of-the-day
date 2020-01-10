@@ -8,13 +8,22 @@ function ApodCard(props) {
 
     //styled components
 
-    const Heading= styled.h1`
+    const Banner= styled.h1`
     font-size: 55px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
     font-weight: 300;
-    `
+    `;
+
+    const Title= styled(Banner)`
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+    font-weight: 300;
+    font-size: 38px;
+    text-align: left;
+    `;
 
     // Trying to create button to change the date. I need to refactor my whole project to implement this inside of ApodList file, instead of here.
 
@@ -40,14 +49,14 @@ function ApodCard(props) {
     return (
         <Card className='reactCard'>
             <Jumbotron className='jumbo'>
-                <Heading>Welcome to NASA Photo of the Day</Heading>
+                <Banner>Welcome to NASA Photo of the Day</Banner>
             </Jumbotron>
             <div className='apod-card'>
                 <div className='img'>
                     <img src={props.url} alt= {props.title} />
                 </div>
                 <div>
-                    <h1 class='font'>Topic: {props.title}</h1>
+                    <Title>Topic: {props.title}</Title>
                     <h2 class='font'>Author: {props.name}</h2>
                     <p class='font'>{props.description}</p>
                 </div>
