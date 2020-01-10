@@ -5,9 +5,44 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('https://images.unsplash.com/photo-1578364249730-0c4ee16426fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80');
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.apod-card{
+  /* border: 1px solid red; */
+  display: flex;
+  width: 100%;
+}
+img{
+  width: 30vw;
+  height: 40vh;
+  border-radius: 3px;
+}
+.img{
+  margin: 2%;
+}
+.font{
+  text-align: left;
+  font-weight: 300;
+}
+.App{
+  margin: 10% 5%;
+  
+}
+form{
+  margin-top: 2%;
+}
+.reactCard{
+  padding: 2%;
+}
+.btn{
+  margin-right: 5px;
+}
+.display-4{
+  text-align: center;
 }
